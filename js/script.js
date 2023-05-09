@@ -1,5 +1,3 @@
-import './app';
-
 const tableIn = document.querySelector('#table');
 const tbody = document.querySelector('#tbody');
 const url = "http://localhost:3000/in"
