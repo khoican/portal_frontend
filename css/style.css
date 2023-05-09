@@ -65,4 +65,5 @@
     right: -27vw;
     padding: 20px;
     filter: drop-shadow(1px 0 15px #222);
+    transition: all .5s;
 }
