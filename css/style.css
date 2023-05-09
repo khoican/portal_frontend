@@ -1,0 +1,68 @@
+@import "./root.css";
+
+.d-flex {
+    display: flex;
+}
+.col-6 {
+    width: 50% !important;
+}
+
+.navbar {
+    background-color: var(--black);
+    color: var(--white);
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+}
+
+.nav-brand {
+    align-items: center;
+    gap: 2rem;
+}
+
+.logo-img {
+    width: 7vw;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--white);
+    opacity: 50%;
+}
+.navbar a:hover {
+    opacity: 100%;
+}
+
+.container {
+    padding: 3rem;
+    gap: 5px;
+    text-align: center;
+}
+.container h3 {
+    font-weight: 600;
+}
+
+.table {
+    border-collapse: collapse;
+    margin-top: 1rem;
+    width: 100%;
+}
+.table thead {
+    text-align: center;
+    border-bottom: 2px solid rgba(0, 0, 0, 1)
+}
+.table th, td {
+    padding: 7px 5px;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, .1)
+}
+.sidebar {
+    width: 25vw;
+    height: 100vh;
+    background-color: var(--white);
+    position: fixed;
+    top: 0;
+    right: -27vw;
+    padding: 20px;
+    filter: drop-shadow(1px 0 15px #222);
+}

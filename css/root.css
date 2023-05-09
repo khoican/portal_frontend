@@ -1,0 +1,16 @@
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --black: #111111;
+    --dark_blue: #146C94;
+    --blue: #19A7CE;
+    --grey: #F6F1F1;
+    --white: #ffffff;
+}
