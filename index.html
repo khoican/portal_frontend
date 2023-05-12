@@ -62,9 +62,23 @@
     </main>
 
     <section class="sidebar">
-        <p>tes</p>
-        <i class="bi bi-x-lg close"></i>
-        <button type="submit" class="generate">Download</button>
+        <div class="d-flex header-side">
+            <h3>Laporan</h3>
+            <i class="bi bi-x-lg close"></i>
+        </div>
+
+        <p>Unduh Laporan Bulan Ini</p>
+        <form id="set-date">
+            <label for="kalender-then">
+                Dari
+                <input type="date" name="" id="kalender-then">
+            </label>
+            <label for="kalender-now">
+                Dari
+                <input type="date" name="" id="kalender-now">
+            </label>
+            <button class="generate">Download</button>
+        </form>
     </section>
 
     <section class="modal-masuk modal">

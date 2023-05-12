@@ -1,5 +1,6 @@
 const tbodyIn = document.querySelector('#tbody-in');
 const tbodyOut = document.querySelector('#tbody-out');
+const date = document.querySelector('#set-date');
 let form = document.querySelectorAll('form');
 const urlIn = "http://localhost:3000/portal/in";
 const urlOut = "http://localhost:3000/portal/out";
@@ -32,9 +33,39 @@ async function getDataIn() {
         .catch(error => console.log(error))
 }
 getDataIn();    
+
+function getDateIn() {
+    date.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        let dateThen = document.querySelector('#kalender-then').value;
+        let dateNow = document.querySelector('#kalender-now').value;
     
+        let response = {
+            waktuThen: dateThen,
+            waktuNow: dateNow
+        }
+    
+        console.log(response)
+    
+        fetch(`${urlIn}/date`, {
+            method: 'POST',
+            body: JSON.stringify(response),
+            headers: { 'Content-Type': 'application/json; charset=UTF-8' }
+        })
+            .then(response => response.json())
+            .then(
+                data => {
+                    let dataJson = data.body.data
+                    console.log(dataJson)
+                })
+            .catch(error => console.log(error))    
+    })
+}
+getDateIn();
+
 function postDataIn() {
-    form[0].addEventListener('submit', function(e) {
+    form[1].addEventListener('submit', function(e) {
         e.preventDefault();
         
         let namaMasuk = document.querySelector('#nama').value;
@@ -90,7 +121,7 @@ async function getDataOut() {
 getDataOut();
 
 function postDataOut() {
-    form[1].addEventListener('submit', function(e) {
+    form[2].addEventListener('submit', function(e) {
         e.preventDefault();
         
         let namaMasuk = document.querySelector('#nama1').value;
@@ -110,7 +141,6 @@ function postDataOut() {
             .then(json => console.log(json))
             .catch(error => console.log(error))
 
-        location.reload()
     })
 }
 postDataOut();

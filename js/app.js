@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             sidebar.style.visibility = 'visible';
         })
     }
+    openSidebar();
     
     function closeSidebare() {
         close.addEventListener('click', () => {
@@ -22,34 +23,32 @@ document.addEventListener('DOMContentLoaded', () => {
             sidebar.style.visibility = 'hidden';
         })
     }
+    closeSidebare();
     
     function openModalMasuk() {
         modalMasuk.addEventListener('click', () => {
             modalMasukOpen.style.display = 'flex';
         })
     }
+    openModalMasuk();
 
     function openModalKeluar() {
         modalKeluar.addEventListener('click', () => {
             modalKeluarOpen.style.display = 'flex';
         })
     }
-    
-    function closingModal() {
-        for(let i = 0; i <= closeModal.length; i++) {
-            closeModal[i].addEventListener('click', () => {
-                modalMasukOpen.style.display = 'none';
-            })
-            
-            closeModal[i].addEventListener('click', () => {
-                modalKeluarOpen.style.display = 'none';
-            })
-        }
-    }
-    
-    openSidebar();
-    closeSidebare();
-    openModalMasuk();
     openModalKeluar();
-    closingModal();
+    
+    // function closingModal() {
+    //     for(let i = 0; i <= closeModal.length; i++) {
+    //         closeModal[i].addEventListener('click', () => {
+    //             modalMasukOpen.style.display = 'none';
+    //         })
+            
+    //         closeModal[i].addEventListener('click', () => {
+    //             modalKeluarOpen.style.display = 'none';
+    //         })
+    //     }
+    // }
+    // closingModal();
 })
